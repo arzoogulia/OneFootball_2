@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
+1. It makes use of angular forms for searching a player's name. And on submitting the value inside the form, along with this "data API" is invoked and we take the value of "profile-id" from this API.
+2. If the "active field" is "true", we send "profile-id" into "profile API" to get further information about the searched player.
+3. Additionally, the user is able to see all the information such as id, age, team, picture, role displayed in tabular format but only if the "active" field in the data is "true" else the user gets an error message.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
