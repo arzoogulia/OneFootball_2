@@ -1,0 +1,48 @@
+<div class="search-container">
+  <form class="search-form" #form="ngForm">
+    <input
+      class="search-input"
+      name="search"
+      type="text"
+      ngModel
+      placeholder="Search Player..."
+      autocomplete="off"
+      [(ngModel)]="searchText"
+    />
+    <button class="submit-button" (click)="onSubmit(searchText)">Search</button>
+  </form>
+
+  <div class="error" *ngIf="errorFlag == true">
+    <h2>Search Again: Player Not Available!</h2>
+  </div>
+
+  <div class="detail-container" *ngIf="flag1">
+    <div>
+      <img class="image" [src]="picture" alt="picture">
+    </div>
+
+    <div class="information">
+
+      <div class="key">ID:</div>
+      <div class="value">{{submittedid}}</div>
+
+      <div class="key">Active:</div>
+      <div class="value">{{submittedactive}}</div>
+
+      <div class="key">Profile ID:</div>
+      <div class="value">{{submittedprofileid}}</div>
+
+      <div class="key">Age:</div>
+      <div class="value">{{age}}</div>
+
+      <div class="key">Role:</div>
+      <div class="value">{{role}}</div>
+
+      <div class="key">Team:</div>
+      <div class="value">{{team}}</div>
+
+    </div>
+
+  </div>
+</div>
+
